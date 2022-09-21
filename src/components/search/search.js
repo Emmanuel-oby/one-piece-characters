@@ -4,13 +4,21 @@ import { API_URL, apiOptions } from "../../api";
 
 const Search = ({ onSearchChange }) => {
 	const [search, setSearch] = useState(null);
+	const [users, setUsers] = useState([]);
+
 
 	const loadOptions = (inputValue) => {
-		return fetch(API_URL, apiOptions)
+		return fetch(`${API_URL}`, apiOptions)
 			.then((res) => res.json())
 			.then((json) => {
+				setUsers(json);
+				let matches=[];
+				matches = users.filter((user) => {
+					const regex = new RegExp(`${inputValue}`, "gi");
+					return user.name.match(regex);
+				});
 				return {
-					options: json.data.map((character) => {
+					options: matches.map((character) => {
 						return {
 							value: `${character.affiliation}`,
 							label: `${character.name}, ${character.debut}`,
