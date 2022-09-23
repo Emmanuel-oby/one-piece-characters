@@ -1,8 +1,13 @@
-const Image = () => {
-  return (
-   <div>Hello</div>
-  )
-  }
-  
+const Image = (props) => {
+	
+	return (
+		<div>
+			<img
+				src={props.imageURL}
+				alt={""}
+			/>
+		</div>
+	);
+};
 
-export default Image
+export default Image;
