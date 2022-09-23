@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+An app to search and see your favourite one piece characters, equipped with auto-complete search function.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
