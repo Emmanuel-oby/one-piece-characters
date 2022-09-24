@@ -8,7 +8,7 @@ function App() {
 
   const handleOnSearchChange = (searchData) => {
     console.log(searchData.value1);
-    setImg(searchData.value2);
+    setImg(searchData.value2.slice(0, -58));
     console.log(img);
   }
 
