@@ -1,10 +1,13 @@
+import "../../App.css"
+
 const Image = (props) => {
 	
 	return (
 		<div>
 			<img
+        className="image"
 				src={props.imageURL}
-				alt={""}
+				alt={props.alt}
 			/>
 		</div>
 	);
