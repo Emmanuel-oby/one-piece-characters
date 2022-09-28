@@ -1,8 +1,16 @@
-const Image = () => {
-  return (
-   <div>Hello</div>
-  )
-  }
-  
+import "../../App.css"
 
-export default Image
+const Image = (props) => {
+	
+	return (
+		<div>
+			<img
+        className="image"
+				src={props.imageURL}
+				alt={props.alt}
+			/>
+		</div>
+	);
+};
+
+export default Image;
